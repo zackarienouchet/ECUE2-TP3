@@ -1,6 +1,18 @@
 package net.lecnam.ecue2.tp3;
 
-public class Exec {
+public class Point {
+    double x;
+    double y;
+
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public void translate(double x, double y) {
+        this.x += x;
+        this.y += y;
+    }
 
     public static void main(String[] args) {
 
@@ -35,5 +47,17 @@ public class Exec {
                 + point.retourneDistance(point2));
     }
 
+    // Décrit le point
+    @Override
+    public String toString() {
+        return "Point{x=" + x + ", y=" + y + "}";
+    }
 
+    // Calcule la distance entre deux points
+    public double retourneDistance(Point p) {
+        double differenceX = this.x - p.x;
+        double differenceY = this.y - p.y;
+
+        return Math.sqrt(differenceX * differenceX + differenceY * differenceY);
+    }
 }
