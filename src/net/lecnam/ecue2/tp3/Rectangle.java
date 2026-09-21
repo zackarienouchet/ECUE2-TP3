@@ -62,7 +62,7 @@ public class Rectangle {
     public String toString() {
         return "Rectangle : origine=" + origine
                 + ", longueur1=" + longueur1
-                + ", longueur2=" + largeur
+                + ", largeur=" + largeur
                 + ", surface=" + retourneSurface();
     }
 }
