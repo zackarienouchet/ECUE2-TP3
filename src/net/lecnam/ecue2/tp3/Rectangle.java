@@ -3,26 +3,26 @@ package net.lecnam.ecue2.tp3;
 public class Rectangle {
 
     double longueur1;
-    double longueur2;
+    double largeur;
     Point origine;
 
     // Exercice 3 : constructeur avec un Point
-    public Rectangle(Point origine, double longueur1, double longueur2) {
+    public Rectangle(Point origine, double longueur1, double largeur) {
         this.origine = origine;
         this.longueur1 = longueur1;
-        this.longueur2 = longueur2;
+        this.largeur = largeur;
     }
 
     // Exercice 3 : constructeur avec les coordonnées du Point
-    public Rectangle(double x, double y, double longueur1, double longueur2) {
+    public Rectangle(double x, double y, double longueur1, double largeur) {
         this.origine = new Point(x, y);
         this.longueur1 = longueur1;
-        this.longueur2 = longueur2;
+        this.largeur = largeur;
     }
 
     // Exercice 4 : retourne la surface du rectangle
     public double retourneSurface() {
-        return longueur1 * longueur2;
+        return longueur1 * largeur;
     }
 
     // Exercice 4 : déplace le rectangle
@@ -35,7 +35,7 @@ public class Rectangle {
         return point.x >= origine.x
                 && point.x <= origine.x + longueur1
                 && point.y >= origine.y
-                && point.y <= origine.y + longueur2;
+                && point.y <= origine.y + largeur;
     }
 
     // Exercice 6 : compare deux rectangles
@@ -54,7 +54,7 @@ public class Rectangle {
 
         return origine.equals(rectangle.origine)
                 && longueur1 == rectangle.longueur1
-                && longueur2 == rectangle.longueur2;
+                && largeur == rectangle.largeur;
     }
 
     // Exercice 6 : affiche les informations du rectangle
@@ -62,7 +62,7 @@ public class Rectangle {
     public String toString() {
         return "Rectangle : origine=" + origine
                 + ", longueur1=" + longueur1
-                + ", longueur2=" + longueur2
+                + ", longueur2=" + largeur
                 + ", surface=" + retourneSurface();
     }
 }
